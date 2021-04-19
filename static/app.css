@@ -1,0 +1,91 @@
+:root {
+    --background-color: #fafafa;
+    --on-background-color: rgba(0, 0, 0, 0.87);
+    --on-background-color-secondary: rgba(0, 0, 0, 0.60);
+    --link-color-hue: 205;
+    --link-color: hsl(var(--link-color-hue),75.9%,50%);
+    --link-color-hover: hsl(var(--link-color-hue),75.9%,50%);
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --on-background-color: rgba(255, 255, 255, 0.87);
+        --on-background-color-secondary: rgba(255, 255, 255, 0.60);
+        --link-color: hsl(var(--link-color-hue),75.9%,65%);
+        --link-color-hover: hsl(var(--link-color-hue),75.9%,65%);
+    }
+    
+    hr {
+        border-top: 1px solid rgba(255,255,255,.1);
+    }
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--on-background-color);
+}
+footer {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: Hack, monospace;
+    font-size: x-small;
+    color: var(--on-background-color-secondary);
+}
+a {
+    text-decoration: none;
+}
+a, a:focus {
+    transition: color .3s ease-in-out;
+    color: var(--link-color);
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: var(--link-color-hover);
+    text-decoration: none;
+}
+
+.list-inline {
+    margin: 20px -10px 0;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    padding: 30px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    letter-spacing: 7px;
+}
+li {
+    float: left;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+li a {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: var(--on-background-color);
+}
+@media (max-width: 767px) {
+    header h1 {
+        letter-spacing: 5px;
+        font-size: 40px;
+    }
+    .list-inline li {
+        display: list-item;
+    }
+}
