@@ -1,0 +1,58 @@
+:root {
+    --background-color: #fafafa;
+    --on-background-color: rgba(0, 0, 0, 0.87);
+    --on-background-color-secondary: rgba(0, 0, 0, 0.60);
+    --accent-color: #2870a6;
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #121212;
+        --on-background-color: rgba(255, 255, 255, 0.87);
+        --on-background-color-secondary: rgba(255, 255, 255, 0.60);
+        --accent-color: #4797D3;
+    }
+}
+body {
+    background: var(--background-color);
+    font-family: Hack, monospace;
+    line-height: 1.4;
+    font-size: medium;
+    color: var(--on-background-color);
+}
+.date {
+    font-size: small;
+    color: var(--on-background-color-secondary);
+}
+.container-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box-home {
+    width: 800px;
+    padding: 10%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    max-width: 800px;
+    padding: 5vh 10%;
+}
+footer {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: x-small;
+    color: var(--on-background-color-secondary);
+}
+a {
+    color: var(--accent-color);
+}
